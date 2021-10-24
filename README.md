@@ -3,5 +3,5 @@ This repository stores all my dotfiles, based on the process published by [Atlas
 To initialize, run:
 
 ```bash
-curl -sL https://frbnc.is/dotfiles-init | bash
+curl -sL https://raw.githubusercontent.com/frbncis/dotfiles/master/init.sh | bash
 ```
