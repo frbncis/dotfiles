@@ -5,3 +5,5 @@ lg = !"git lg1"
 [user]
 	email = francis@ngyn.me
 	name = Francis Nguyen
+[init]
+	defaultBranch = main
