@@ -323,3 +323,8 @@ bind-key -T copy-mode-vi 'C-j' select-pane -D
 bind-key -T copy-mode-vi 'C-k' select-pane -U
 bind-key -T copy-mode-vi 'C-l' select-pane -R
 bind-key -T copy-mode-vi 'C-\' select-pane -l
+
+# Enable saving tmux output to a logfile
+bind-key H pipe-pane "exec cat >>$HOME/'#W-tmux.log'" \; display-message 'Started logging to $HOME/#W-tmux.log'
+bind-key h pipe-pane \; display-message 'Ended logging to $HOME/#W-tmux.log'
+
