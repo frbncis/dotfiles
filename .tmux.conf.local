@@ -324,6 +324,12 @@ bind-key -T copy-mode-vi 'C-k' select-pane -U
 bind-key -T copy-mode-vi 'C-l' select-pane -R
 bind-key -T copy-mode-vi 'C-\' select-pane -l
 
+# C-b R to set the pane background to red
+bind-key R select-pane -P 'bg=colour088'
+
+# C-b B to set the pane background to black
+bind-key B select-pane -P 'bg=black'
+
 # Renumber windows when one is closed
 set-option -g renumber-windows on
 

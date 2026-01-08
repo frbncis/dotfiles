@@ -97,5 +97,9 @@ nnoremap <C-Left> :vertical resize -5<CR>
 nnoremap <C-Right> :vertical resize +5<CR>
 
 let g:python3_host_prog = "/usr/bin/python3"
-
 let g:vim_ai_roles_config_file = "~/.config/vim-ai/roles.ini"
+
+" Change between tabs with Alt+l and Alt+h
+nnoremap <A-l> :tabn<CR>
+nnoremap <A-h> :tabp<CR>
+
