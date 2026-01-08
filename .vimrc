@@ -1,3 +1,16 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+Plug 'madox2/vim-ai'
+Plug 'madox2/vim-ai-provider-google'
+
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()
+
 " Set compatibility to Vim only.
 set nocompatible
 
@@ -87,3 +100,6 @@ nnoremap <C-Down> :resize -5<CR>
 nnoremap <C-Left> :vertical resize -5<CR>
 nnoremap <C-Right> :vertical resize +5<CR>
 
+let g:python3_host_prog = "/usr/bin/python3"
+
+let g:vim_ai_roles_config_file = "~/.config/vim-ai/roles.ini"
