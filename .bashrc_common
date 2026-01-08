@@ -37,3 +37,8 @@ bind '"\e[B": history-search-forward'
 bind '"\e[C": forward-char'
 bind '"\e[D": backward-char'
 
+if command -v nvim &> /dev/null; then
+  alias vi='nvim'
+  alias vim='nvim'
+  export VISUAL='nvim'
+fi
