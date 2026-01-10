@@ -377,12 +377,11 @@ bind-key -T copy-mode-vi 'C-l' select-pane -R
 bind-key -T copy-mode-vi 'C-\' select-pane -l
 
 
-set -g base-index 1           # start windows numbering at 1
-setw -g pane-base-index 1     # make pane numbering consistent with windows
-setw -g automatic-rename on   # rename window to reflect current program
-set -g renumber-windows on    # renumber windows when a window is closed
-set -g set-titles on          # set terminal title
-set -g display-panes-time 800 # slightly longer pane indicators display time
-set -g display-time 1000      # slightly longer status messages display time
-
-
+# Enable automatic renaming
+set-window-option -g automatic-rename on
+# Set the format to use the current command name
+set-window-option -g automatic-rename-format '#{pane_current_command}'
+# Turn on the feature that passes the title to the terminal emulator
+set-option -g set-titles on
+# Define the string that is passed to the terminal emulator
+set-option -g set-titles-string '#{pane_title}'
